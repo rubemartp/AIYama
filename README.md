@@ -1,5 +1,7 @@
 # Alyama: AI-Driven Dynamic Scheduler
 
+> **Note:** This is a personal mirror of a 3-person team project built for the *Software Engineering II* course (Grado en Ingeniería Informática, Universidad de León, 2025–26). Original repository: [isw2-unileon/AIYama](https://github.com/isw2-unileon/AIYama).
+
 ## About the Project
 Alyama is a dynamic and proactive scheduling system designed to act as a time-optimization assistant. Unlike traditional calendars, it manages schedules, calculates optimal time slots based on the user's energy levels (chronotypes), and uses a cloud-based AI chatbot (Google Gemini API) to negotiate and reach consensus on task distribution. 
 
@@ -96,3 +98,11 @@ The Vite dev server automatically proxies `/api` requests to the Go backend.
 | `POST` | `/api/tasks`     | Saves a confirmed task into the database         |
 | `DELETE`| `/api/tasks/:id` | Removes a task from the schedule                |
 | `POST` | `/api/tasks/undo`| Reverts the last deletion (Rollback)             |
+
+## 👥 Team & Roles
+
+Built by a team of three. Main responsibilities, as derived from the commit history:
+
+- **Rubén Martínez Pollán** ([@rubemartp](https://github.com/rubemartp)) — AI engine & backend: Gemini API integration, allocation/scheduling engine, `propose-schedule` endpoint, chatbot logic and onboarding endpoints (Go); onboarding UI; SRS documentation; PR review & merges.
+- **Adrián García Da Silva** ([@agarcd18](https://github.com/agarcd18)) — Frontend auth (login/register), UI/UX polish, flexible-task CRUD endpoints (Go), Supabase project setup & relational schema.
+- **Pablo Díez Fernández** ([@PabloDiezFernandez](https://github.com/PabloDiezFernandez)) — Weekly calendar & advanced task management (undo/delete), chatbot + consensus panel frontend, deployment & connectivity fixes (CORS, Docker, routing).
